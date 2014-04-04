@@ -1,11 +1,40 @@
 <html>
 	<head>
-		<title>Computed v.0.1.0</title>
+		<title>Computed v.0.1.1</title>
         <style>
             body {
                 background-image: url('');
             }
             
+            #game{
+             position:fixed;
+               left: 39%;
+                 width:20em;
+             height:22em;
+             text-align: center;
+            }
+            
+            #options{
+              position:fixed;
+              top: 20%;
+              left: 82%;
+               width:30em;
+             height:22em;
+               margin-top: -9em; /*set to a negative number 1/2 of your height*/
+               margin-left: -15em; /*set to a negative number 1/2 of your width*/
+                border: 1px solid #ccc;
+                background-color: #808080;
+                color: #ffffff;
+            }
+            
+            #buttons{
+               position:fixed;
+              top: 1%;
+              left: 1%; 
+            width:30em;
+             height:22em;
+            }
+                        
             .buttonclass {
 	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
@@ -55,15 +84,16 @@
 	</head>
 	<body>
        
-	<div align="center">
+	<div id="game">
  <p>Copyrights© Bary Schen Levi</p>
 		<script src="learn.js">
 		</script>
-		<img id = "bitcoins" onclick="addCoin(this)" src="http://i.imgur.com/WxpuJtY.png" onmouseover="bitcoinImg(this)" onmouseout="bitcoinImg2(this)"></img>
+		<img alt="bitcoins" id = "bitcoins" onclick="addCoin()" src="http://i.imgur.com/WxpuJtY.png" onmouseover="bitcoinImg(this)" onmouseout="bitcoinImg2(this)" onload="init()"></img>
 		<h3 id="bit">Bitcoins: 0</h3>
 		<h3 id="perSecond">Per Second: 0</h3>
 
 	</div>
+        <div id="buttons">
      	<button class="buttonclass" id="build1" onclick="build[1].buy()">Junky laptop - 70 Bitcoins (0)</button> </br>
         <button class = "buttonclass" id="build2" onclick="build[2].buy()">Average PC - 300 Bitcoins (0)</button></br>
         <button class = "buttonclass" id="build3" onclick="build[3].buy()">Gaming PC - 1000 Bitcoins (0)</button></br>
@@ -72,5 +102,12 @@
         <button class = "buttonclass" id="build6" onclick="build[6].buy()">Medium cluster computer - 100000 Bitcoins (0)</button></br>
     	<button class = "buttonclass" id="build7" onclick="build[7].buy()">Large cluster computer - 500000 Bitcoins (0)</button></br>
 
+            </div>
+
+        <div id="options">
+            <h1>Options</h1>
+            <h3>Cooming soon :D</h3>
+            
+        </div>
 	</body>
 </html>

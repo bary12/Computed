@@ -5,6 +5,9 @@ var build = new Array();
 var elementBitcoins;
 var elementPerSecond;
 var elements = new Array();
+
+init();
+
 function building(price, bps, name) {
     this.price = price;
     this.bps = bps;
@@ -31,18 +34,21 @@ building.prototype.buy = function () {
     build[6] = new building(100000, 1000, "Medium cluster computer");
     build[7] = new building(500000, 4500, "Large cluster computer");
 
+    function init(){
+        elementBitcoins=document.getElementById("bit");
+        elementPerSecond = document.getElementById("perSecond");
+    for(var i = 1; i<=7; i++){
+    elements[i] = document.getElementById("build" + i);
 
+}
+    }
 
-function addCoin(id){
+function addCoin(){
 
     bitcoins = Math.round(bitcoins + 1);
-var element=document.getElementById("bit");
-element.innerHTML="Bitcoins: " + bitcoins;
-elementBitcoins = element;
-elementPerSecond = document.getElementById("perSecond");
-for(var i = 1; i<=7; i++){
-    elements[i] = document.getElementById("build" + i);
-}
+elementBitcoins.innerHTML="Bitcoins: " + bitcoins;
+
+
 }
 
 	function bitcoinImg(id) {
@@ -54,6 +60,8 @@ for(var i = 1; i<=7; i++){
 		var element = document.getElementById("bitcoins");
 		element.src="http://i.imgur.com/WxpuJtY.png";
 	}
+
+
 	var loop = function () {
 
 	    bitcoins += bitcoinsps / 10;
@@ -67,3 +75,6 @@ for(var i = 1; i<=7; i++){
 	}
 
     setInterval(loop,100);
+    function save(){
+        
+    }
