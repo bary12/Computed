@@ -40,8 +40,30 @@ building.prototype.buy = function () {
     for(var i = 1; i<=7; i++){
     elements[i] = document.getElementById("build" + i);
 
-}
+	}
     }
+function save() {
+	localStorage["bitcoins"] = JSON.stringify(bitcoins);
+	localStorage["bitcoinsps"] = JSON.stringify(bitcoinsps);
+	for(var i =1; i <= 7; i++){
+		localStorage["buildinga" + i] = JSON.stringify(build[i].amount);
+		localStorage["buildingp" + i] = JSON.stringify(build[i].price);
+
+	}
+}
+
+function load(){
+	bitcoins = JSON.parse(localStorage["bitcoins"]);
+	bitcoinsps = JSON.parse(localStorage["bitcoinsps"]);
+
+    	for(var i =1; i <= 7; i++){
+		build[i].amount = JSON.parse(localStorage["buildinga" + i]);
+		build[i].price = JSON.parse(localStorage["buildingp" + i]);
+
+	}
+}
+
+load();
 
 function addCoin(){
 
@@ -75,6 +97,4 @@ elementBitcoins.innerHTML="Bitcoins: " + bitcoins;
 	}
 
     setInterval(loop,100);
-    function save(){
-        
-    }
+	setInterval(save,30000);
