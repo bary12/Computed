@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Computed v.0.2.0</title>
+		<title>Computed v.0.2.1</title>
         <style>
             body {
                 background-image: url('http://i.imgur.com/fSaAAt1.png');
@@ -41,48 +41,60 @@
                 color: #ffffff;
             }
             
+	    #programming{
+		position: fixed;
+		top: 70%;
+		left: 1%;
+		width:31em;
+		height:22em;
+		margin-top: -9em; /*set to a negative number 1/2 of your height*/
+		border: 1px solid #ccc;
+                background-color: #808080;
+                color: #ffffff;
+	    }
+	    
             #buttons{
-               position:fixed;
-              top: 1%;
-              left: 1%; 
-            width:30em;
-             height:22em;
+		position:fixed;
+		top: 1%;
+		left: 1%; 
+		width:30em;
+		height:22em;
             }
                         
             .buttonclass {
-	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	box-shadow:inset 0px 1px 0px 0px #97c4fe;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
-	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
-	background-color:#3d94f6;
-	-webkit-border-top-left-radius:20px;
-	-moz-border-radius-topleft:20px;
-	border-top-left-radius:20px;
-	-webkit-border-top-right-radius:20px;
-	-moz-border-radius-topright:20px;
-	border-top-right-radius:20px;
-	-webkit-border-bottom-right-radius:20px;
-	-moz-border-radius-bottomright:20px;
-	border-bottom-right-radius:20px;
-	-webkit-border-bottom-left-radius:20px;
-	-moz-border-radius-bottomleft:20px;
-	border-bottom-left-radius:20px;
-	text-indent:0;
-	border:1px solid #337fed;
-	display:inline-block;
-	color:#ffffff;
-	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-size:22px;
-	font-weight:bold;
-	font-style:normal;
-	height:50px;
-	line-height:50px;
-	width:500px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #1570cd;
+		-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+		box-shadow:inset 0px 1px 0px 0px #97c4fe;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+		background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+		background-color:#3d94f6;
+		-webkit-border-top-left-radius:20px;
+		-moz-border-radius-topleft:20px;
+		border-top-left-radius:20px;
+		-webkit-border-top-right-radius:20px;
+		-moz-border-radius-topright:20px;
+		border-top-right-radius:20px;
+		-webkit-border-bottom-right-radius:20px;
+		-moz-border-radius-bottomright:20px;
+		border-bottom-right-radius:20px;
+		-webkit-border-bottom-left-radius:20px;
+		-moz-border-radius-bottomleft:20px;
+		border-bottom-left-radius:20px;
+		text-indent:0;
+		border:1px solid #337fed;
+		display:inline-block;
+		color:#ffffff;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		font-size:20px;
+		font-weight:bold;
+		font-style:normal;
+		height:50px;
+		line-height:50px;
+		width:500px;
+		text-decoration:none;
+		text-align:center;
+		text-shadow:1px 1px 0px #1570cd;
 }
 .buttonclass:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
@@ -103,7 +115,7 @@
 	<body>
        
 	<div id="game">
- <p>Copyrights© Bary Schen Levi</p>
+ <p>Copyrights© Bary Schen Levi (tho inspired by Cookie Clicker)</p>
 		<script src="learn.js">
 		</script>
 		<img alt="bitcoins" id = "bitcoins" onclick="addCoin()" src="http://i.imgur.com/WxpuJtY.png" onmouseover="bitcoinImg(this)" onmouseout="bitcoinImg2(this)" onload="init()"></img>
@@ -112,13 +124,13 @@
 
 	</div>
         <div id="buttons">
-     	<button class="buttonclass" id="build1" onclick="build[1].buy()">Junky laptop - 70 Bitcoins (0)</button> </br>
-        <button class = "buttonclass" id="build2" onclick="build[2].buy()">Average PC - 300 Bitcoins (0)</button></br>
-        <button class = "buttonclass" id="build3" onclick="build[3].buy()">Gaming PC - 1000 Bitcoins (0)</button></br>
-        <button class = "buttonclass" id="build4" onclick="build[4].buy()">Dedicated hardware - 5000 Bitcoins (0)</button></br>
-        <button class = "buttonclass" id="build5" onclick="build[5].buy()">Small cluster computer - 24000 Bitcoins (0)</button></br>
-        <button class = "buttonclass" id="build6" onclick="build[6].buy()">Medium cluster computer - 100000 Bitcoins (0)</button></br>
-    	<button class = "buttonclass" id="build7" onclick="build[7].buy()">Large cluster computer - 500000 Bitcoins (0)</button></br>
+     	<button class="buttonclass" id="build1" onclick="build[1].buy()">Junky laptop - 70 Bitcoins (0)</button><br>
+        <button class = "buttonclass" id="build2" onclick="build[2].buy()">Average PC - 300 Bitcoins (0)</button><br>
+        <button class = "buttonclass" id="build3" onclick="build[3].buy()">Gaming PC - 1000 Bitcoins (0)</button><br>
+        <button class = "buttonclass" id="build4" onclick="build[4].buy()">Dedicated hardware - 5000 Bitcoins (0)</button><br>
+        <button class = "buttonclass" id="build5" onclick="build[5].buy()">Small cluster computer - 24000 Bitcoins (0)</button><br>
+        <button class = "buttonclass" id="build6" onclick="build[6].buy()">Medium cluster computer - 100000 Bitcoins (0)</button><br>
+    	<button class = "buttonclass" id="build7" onclick="build[7].buy()">Large cluster computer - 2000000 Bitcoins (0)</button><br>
 
             </div>
 
@@ -128,8 +140,11 @@
         </div>
                 <div id="stats">
             <h1>Stats</h1>
-            <h3>Cooming soon :D</h3>
-            
+		<p id="statsTotal">Total Bitcoins: 0</p>            
         </div>
+		<div id="programming">
+			<h1>Programming (AKA upgrades)</h1>
+			<h3>Cooming soon :D</h3>
+		</div>
 	</body>
 </html>
