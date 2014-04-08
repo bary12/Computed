@@ -60,12 +60,6 @@ function save() {
 function load(){
 	bitcoins = JSON.parse(localStorage["bitcoins"]);
 	bitcoinsps = JSON.parse(localStorage["bitcoinsps"]);
-
-	if (totalBitcoins === 0) {
-		totalBitcoins = bitcoins;
-		localStorage["totalBitcoins"] = JSON.stringify(totalBitcoins);
-
-	}
 		totalBitcoins = JSON.parse(localStorage["totalBitcoins"]);
 	
     	for(var i =1; i <= 7; i++){
@@ -102,7 +96,7 @@ function addCoin(){
 	    var rounded = Math.round(bitcoins);
 	    elementBitcoins.innerHTML = "Bitcoins: " + rounded;
 	    elementPerSecond.innerHTML = "Per Second: " + bitcoinsps;
-	    totalBitcoinsElement.innerHTML = "Total Bitcoins: " + Math.round(totalBitcoins);
+	    totalBitcoinsElement.innerHTML = "Total Bitcoins made: " + Math.round(totalBitcoins);
 	    for (var i = 1; i <= 7; i++) {
 	        elements[i].innerHTML = build[i].name + " - " + build[i].price + " Bitcoins (" + build[i].amount + ")";
 	    }
