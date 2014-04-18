@@ -1,4 +1,3 @@
-
 var bitcoins = 0;
 var bitcoinsps = 0;
 var build = new Array();
@@ -58,6 +57,10 @@ function save() {
 }
 
 function load(){
+	if(localStorage["firstTime"] != 'n'){
+		localStorage["firstTime"] = 'n';
+		save();
+	}
 	bitcoins = JSON.parse(localStorage["bitcoins"]);
 	bitcoinsps = JSON.parse(localStorage["bitcoinsps"]);
 		totalBitcoins = JSON.parse(localStorage["totalBitcoins"]);
